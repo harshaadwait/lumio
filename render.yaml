@@ -19,3 +19,5 @@ services:
         value: 100
       - key: TOP_K_RESULTS
         value: 5
+      - key: PYTHON_VERSION
+        value: 3.11.9
