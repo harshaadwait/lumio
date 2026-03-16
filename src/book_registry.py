@@ -1,0 +1,128 @@
+"""
+Book registry — single source of truth for problem → book mapping.
+Used by ingestion pipeline and retrieval layer.
+"""
+
+BOOK_REGISTRY = [
+    {
+        "problem_tag": "lack_of_focus",
+        "problem_label": "Lack of Focus",
+        "book_title": "Deep Work",
+        "author": "Cal Newport",
+        "core_insight": "Deep focus is the superpower of the modern world.",
+        "action_prompt": "Eliminate distractions and produce your best work.",
+        "filename": "lack_of_focus___deep_work.pdf",
+    },
+    {
+        "problem_tag": "negative_thinking",
+        "problem_label": "Negative Thinking",
+        "book_title": "The Power of Positive Thinking",
+        "author": "Norman Vincent Peale",
+        "core_insight": "Positive thoughts create positive outcomes.",
+        "action_prompt": "Train your mind to see opportunities instead of problems.",
+        "filename": "negative_thinking___power_of_positive_thinking.pdf",
+    },
+    {
+        "problem_tag": "lack_of_discipline",
+        "problem_label": "Lack of Discipline",
+        "book_title": "Atomic Habits",
+        "author": "James Clear",
+        "core_insight": "Small daily habits create extraordinary results over time.",
+        "action_prompt": "Improve just 1% every day and success becomes inevitable.",
+        "filename": "lack_of_discipline___atomic_habits.pdf",
+    },
+    {
+        "problem_tag": "lack_of_confidence",
+        "problem_label": "Lack of Confidence",
+        "book_title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "core_insight": "Success in life depends on how well you understand people.",
+        "action_prompt": "Master communication and build powerful relationships.",
+        "filename": "lack_of_confidence___how_to_win_friends.pdf",
+    },
+    {
+        "problem_tag": "lack_of_motivation",
+        "problem_label": "Lack of Motivation",
+        "book_title": "Can't Hurt Me",
+        "author": "David Goggins",
+        "core_insight": "Your mind is stronger than any obstacle you face.",
+        "action_prompt": "Push past limits and build unstoppable mental toughness.",
+        "filename": "lack_of_motivation___cant_hurt_me.pdf",
+    },
+    {
+        "problem_tag": "fear_of_failure",
+        "problem_label": "Fear of Failure",
+        "book_title": "Think and Grow Rich",
+        "author": "Napoleon Hill",
+        "core_insight": "Your thoughts have the power to shape your destiny.",
+        "action_prompt": "Strong belief and persistence turn dreams into reality.",
+        "filename": "fear_of_failure___think_and_grow_rich.pdf",
+    },
+    {
+        "problem_tag": "overthinking",
+        "problem_label": "Overthinking",
+        "book_title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "core_insight": "Stop living in your thoughts and start living in the present moment.",
+        "action_prompt": "Peace and clarity appear when you learn to focus on now.",
+        "filename": "overthinking___power_of_now.pdf",
+    },
+    {
+        "problem_tag": "financial_problems",
+        "problem_label": "Financial Problems",
+        "book_title": "Rich Routines",
+        "author": "Steve Houghton",
+        "core_insight": "Success is not built in one day — it is built through powerful daily routines.",
+        "action_prompt": "The habits you repeat every day decide your wealth, discipline, and future success.",
+        "filename": "financial_problems___rich_routines.pdf",
+    },
+    {
+        "problem_tag": "procrastination",
+        "problem_label": "Procrastination",
+        "book_title": "The War of Art",
+        "author": "Steven Pressfield",
+        "core_insight": "Resistance is the enemy of all creative work. Action beats motivation.",
+        "action_prompt": "Do one uncomfortable task daily. Identify your main resistance pattern.",
+        "filename": "procrastination___war_of_art.pdf",
+    },
+    {
+        "problem_tag": "feeling_lost",
+        "problem_label": "Feeling Lost",
+        "book_title": "Man's Search for Meaning",
+        "author": "Viktor Frankl",
+        "core_insight": "Perspective resets direction. Meaning reduces anxiety.",
+        "action_prompt": "Read slowly, reflect, and write one insight after each session.",
+        "filename": "feeling_lost___mans_search_for_meaning.pdf",
+    },
+    {
+        "problem_tag": "emotional_money_decisions",
+        "problem_label": "Emotional Money Decisions",
+        "book_title": "The Psychology of Money",
+        "author": "Morgan Housel",
+        "core_insight": "Money behavior matters more than money knowledge.",
+        "action_prompt": "Review your spending patterns and adjust one habit immediately. Calm investors win.",
+        "filename": "emotional_money_decisions___psychology_of_money.pdf",
+    },
+    {
+        "problem_tag": "misjudging_people",
+        "problem_label": "Misjudging People",
+        "book_title": "The Laws of Human Nature",
+        "author": "Robert Greene",
+        "core_insight": "Patterns reveal motives. Awareness protects you.",
+        "action_prompt": "Observe behavior in real life. Don't apply everything — just notice.",
+        "filename": "misjudging_people___laws_of_human_nature.pdf",
+    },
+    {
+        "problem_tag": "emotional_reactivity",
+        "problem_label": "Emotional Reactivity",
+        "book_title": "Meditations",
+        "author": "Marcus Aurelius",
+        "core_insight": "Emotional control is trained daily. Stability builds power.",
+        "action_prompt": "Practice pausing before reacting. Focus only on what you control.",
+        "filename": "emotional_reactivity___meditations.pdf",
+    },
+]
+
+# Lookup helpers
+PROBLEM_TAGS = [b["problem_tag"] for b in BOOK_REGISTRY]
+BOOK_BY_TAG = {b["problem_tag"]: b for b in BOOK_REGISTRY}
