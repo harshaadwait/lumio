@@ -5,7 +5,6 @@
 # Book PDFs (copyright — never commit)
 data/books/
 data/processed/
-data/chroma_db/
 
 # Python
 __pycache__/
